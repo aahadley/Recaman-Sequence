@@ -35,7 +35,7 @@ never discarded, resulting in *O(n)* space complexity.
 ## Proposed Solution
 While we don't know if the sequence injects the natural numbers, we do know that
 large ranges will be accounted for. Applying this knowledge, large ranges can be
-represented with a single integer or tuple.
+represented with a single integer or tuple. This will allow for individual elements to be removed from the database as ranges become full.
 
 ### Inserting
 
