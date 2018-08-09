@@ -1,6 +1,8 @@
 
 # Introduction
-    This project aims to find an efficient algorithm for generating elements of the Recaman Sequence. My hope is that some of the techniques used in this project will be applicable to other problems in the future.
+    This project aims to find an efficient algorithm for generating elements of the
+     Recaman Sequence. My hope is that some of the techniques used in this project
+      will be applicable to other problems in the future.
 
 # The Recaman Sequence:
 
@@ -25,11 +27,17 @@
 
 # Complexity:
 
-    Generating numbers for the sequence is easy. The magnitude of each "jump" always increases by 1, and can be determined trivially. However, every time a new member is generated, a database containing all previous members must be queried. Using a hash table, this can be done in *0(1)* time for each element, but elements are never discarded, resulting in *O(n)* space complexity.
+    Generating numbers for the sequence is easy. The magnitude of each "jump" always 
+    increases by 1, and can be determined trivially. However, every time a new member
+    is generated, a database containing all previous members must be queried. Using a
+    hash table, this can be done in *0(1)* time for each element, but elements are 
+    never discarded, resulting in *O(n)* space complexity.
 
 # Proposed Solution:
 
-    While we don't know if the sequence injects the natural numbers, we do know that large ranges will be accounted for. Applying this knowledge, large ranges can be represented with a single integer or tuple.
+    While we don't know if the sequence injects the natural numbers, we do know that
+    large ranges will be accounted for. Applying this knowledge, large ranges can be
+    represented with a single integer or tuple.
 
         ## Inserting:
 
