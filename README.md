@@ -71,5 +71,4 @@ yet to be determined.
 - [ ] Test the dynamic solution to asses improvements in space-efficiency.
 
 Author: Aaron Hadley
-
 email:  aahadley1@gmail.com
