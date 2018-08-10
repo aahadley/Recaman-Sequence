@@ -70,5 +70,5 @@ yet to be determined.
 - [ ] Deveop a dynamic solution.
 - [ ] Test the dynamic solution to asses improvements in space-efficiency.
 
-Author: Aaron Hadley
+Author: Aaron Hadley  
 email:  aahadley1@gmail.com
