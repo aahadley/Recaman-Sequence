@@ -53,7 +53,7 @@ represented with a single integer or tuple. This will allow for individual eleme
 - This continues to T<sub>1</sub>.
 
 ### Base-10 Solution
-The Base-10 solution splits ranges by powers of 10. When 10 consecutive elements are filled, they are collapsed. When Querying the database, n/10<sup>m</sup> is queried against T<sub>m</sub>, followed by n/10<sup>m-1<\sup> against T<sub>m-1</sub>, and so on until the value is found.
+The Base-10 solution splits ranges by powers of 10. When 10 consecutive elements are filled, they are collapsed. When Querying the database, n/10<sup>m</sup> is queried against T<sub>m</sub>, followed by n/10<sup>m-1</sup> against T<sub>m-1</sub>, and so on until the value is found.
 
 ### Dynamic Solution
 Ranges are determined dynamically, to avoid large ranges with small holes taking up
