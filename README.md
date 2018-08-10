@@ -33,19 +33,38 @@ hash table, this can be done in *0(1)* time for each element, but elements are
 never discarded, resulting in *O(n)* space complexity.
 
 ## Proposed Solution
+
+### General Solution
 While we don't know if the sequence injects the natural numbers, we do know that
 large ranges will be accounted for. Applying this knowledge, large ranges can be
 represented with a single integer or tuple. This will allow for individual elements to be removed from the database as ranges become full.
 
-### Inserting
+#### Inserting
 
 - Each new value is stored in a base-level hash table T<sub>1</sub>.
-- When a range, R<sub>1,1</sub> is filled, R<sub>1,1</sub> is stored as an integer or tuple in the next level hash table T<sub>2</sub>.
-- When a large range of ranges R<sub>2,1</sub> is filled, it is stored in the next level hash T<sub>3</sub>.
+- When a range, R<sub>1,1</sub> is filled, R<sub>1,1</sub> is collapsed. (freed, and stored as an integer or tuple in the next level hash table T<sub>2</sub>.)
+- When a large range of ranges R<sub>2,1</sub> is filled, it stored in the next level hash T<sub>3</sub>.
 - this pattern may continue indefinitely.
 
-### Querying
+#### Querying
 
 - The value is first queried against the highest level hash table T<sub>m</sub>.
 - If not found, it is then queried against H<sub>m-1</sub>.
 - This continues to T<sub>1</sub>.
+
+### Base-10 Solution
+The Base-10 solution splits ranges by powers of 10. When 10 consecutive elements are filled, they are collapsed. When Querying the database, n/10<sup>m</sup> is queried against T<sub>m</sub>, followed by n/10<sup>m-1<\sup> against T<sub>m-1</sub>, and so on until the value is found.
+
+### Dynamic Solution
+Ranges are determined dynamically, to avoid large ranges with small holes taking up
+too much space. For example, under the Base-10 solution, the values
+[[0, 98], [100, 298]] would not be colllapsed. The mechanics of this solution are
+yet to be determined.
+
+## Plan of Development
+
+- [x] Develop a naive solution using a single hash table.
+- [ ] Develop a base-10 solution.
+- [ ] Test the base-10 solution to asses improvements in space-efficiency.
+- [ ] Deveop a dynamic solution.
+- [ ] Test the dynamic solution to asses improvements in space-efficiency.
