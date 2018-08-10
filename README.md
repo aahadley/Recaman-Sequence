@@ -68,8 +68,8 @@ yet to be determined.
 - [ ] Develop a base-10 solution.
 - [ ] Test the base-10 solution to asses improvements in space-efficiency.
 - [ ] Deveop a dynamic solution.
-
+- [ ] Test the dynamic solution to asses improvements in space-efficiency.
 
 Author: Aaron Hadley
+
 email:  aahadley1@gmail.com
-- [ ] Test the dynamic solution to asses improvements in space-efficiency.
