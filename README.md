@@ -1,4 +1,5 @@
 # The Recaman Sequence
+0, 1, 3, 6, 2, 7, 13, 20, 12, 21, ...
 
 ## Introduction
 This project aims to find an efficient algorithm for generating elements of the
