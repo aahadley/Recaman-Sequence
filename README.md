@@ -59,7 +59,7 @@ The Base-10 solution splits ranges by powers of 10. When 10 consecutive elements
 ### Dynamic Solution
 Ranges are determined dynamically, to avoid large ranges with small holes taking up
 too much space. For example, under the Base-10 solution, the values
-[[0, 98], [100, 298]] would not be colllapsed. The mechanics of this solution are
+[0, 98]∪[100, 298] would not be colllapsed. The mechanics of this solution are
 yet to be determined.
 
 ## Plan of Development
