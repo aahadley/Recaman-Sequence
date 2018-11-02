@@ -50,7 +50,7 @@ represented with a single integer or tuple. This will allow for individual eleme
 #### Querying
 
 - The value is first queried against the highest level hash table T<sub>m</sub>.
-- If not found, it is then queried against H<sub>m-1</sub>.
+- If not found, it is then queried against T<sub>m-1</sub>.
 - This continues to T<sub>1</sub>.
 
 ### Base-10 Solution
